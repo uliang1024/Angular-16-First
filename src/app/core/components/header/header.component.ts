@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { routes } from 'src/app/features/courses/courses-routing.module';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,8 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 })
 export class HeaderComponent {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
+
+  routeList = routes[0].children
 
   constructor(private observer: BreakpointObserver, private cdRef: ChangeDetectorRef) { }
 
