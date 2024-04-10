@@ -1,0 +1,109 @@
+mat-toolbar {
+    background: #004a9f;
+    color: white;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+
+    mat-sidenav {
+        margin: 16px;
+        width: 200px;
+        border-right: none;
+        background: #002b5c;
+        color: white;
+        border-radius: 10px;
+        padding: 16px;
+        text-align: center;
+
+        .avatar {
+            margin-top: 16px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .name {
+            margin-top: 8px;
+            font-weight: normal;
+        }
+
+        .designation {
+            margin-top: 2px;
+            font-size: 0.7rem;
+            color: lightgrey;
+        }
+
+        mat-divider {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        mat-nav-list {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 1rem;
+
+            mat-icon {
+                margin-right: 8px;
+            }
+        }
+
+        mat-expansion-panel {
+            background: #002b5c;
+            color: white;
+            width: 100%;
+
+            mat-expansion-panel-header {
+                padding: 0;
+            }
+
+            ::ng-deep {
+                .mat-expansion-panel-body {
+                    padding: 0;
+
+                    .mdc-list {
+                        padding: 0;
+
+                        .mdc-list-item.mdc-list-item--with-one-line {
+                            height: auto;
+                            .mdc-list-item__content {
+                                display: flex;
+                                justify-content: flex-start;
+                                .mdc-list-item__primary-text {
+                                    color: white;
+                                    display: flex;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                .mat-content {
+                    font-size: 1rem;
+                }
+                .mat-expansion-indicator {
+                    padding-inline: 5px;
+                    &::after {
+                        color: white !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        height: calc(100vh - 98px);
+        border-radius: 10px;
+        margin: 16px;
+        margin-left: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: lightgray;
+    }
+}
