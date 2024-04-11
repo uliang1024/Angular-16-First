@@ -1,1 +1,28 @@
-<p>lesson2 works!</p>
+<h3>組件生命週期</h3>
+
+<hr>
+
+<p>在您的應用程序通過調用其構造函數實例化組件或指令之後，Angular 將在該實例的生命周期中適當的時間點調用您已實現的 hook methods。</p>
+
+<p>Angular 按照以下順序執行 hook methods。您可以使用它們執行以下類型的操作。</p>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" [multiTemplateDataRows]="true">
+
+    <ng-container matColumnDef="hook_method">
+        <th mat-header-cell *matHeaderCellDef> HOOK METHOD </th>
+        <td mat-cell *matCellDef="let element"[innerHTML]="sanitizeHtml(element.hook_method)"></td>
+    </ng-container>
+
+    <ng-container matColumnDef="purpose">
+        <th mat-header-cell *matHeaderCellDef> PURPOSE </th>
+        <td mat-cell *matCellDef="let element" [innerHTML]="sanitizeHtml(element.purpose)"></td>
+    </ng-container>
+
+    <ng-container matColumnDef="timing">
+        <th mat-header-cell *matHeaderCellDef> TIMING </th>
+        <td mat-cell *matCellDef="let element" [innerHTML]="sanitizeHtml(element.timing)"></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
+</table>

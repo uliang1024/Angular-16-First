@@ -10,8 +10,8 @@ export const routes: Routes = [
     path: '', 
     component: CoursesComponent,
     children: [
-      { path: 'lesson1', component: Lesson1Component, title: 'Module 與 MVC 設計模型' },
-      { path: 'lesson2', component: Lesson2Component, title: '初探路由與導覽' },
+      { path: 'lesson1', component: Lesson1Component, title: '終端機指令' },
+      { path: 'lesson2', component: Lesson2Component, title: '組件生命週期' },
       { path: 'lesson3', component: Lesson3Component, title: 'HTML Binding 與 Event 處理' },
     ]
   }
