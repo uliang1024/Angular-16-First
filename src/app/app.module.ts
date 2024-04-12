@@ -11,7 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomScrollDirective
+    CustomScrollDirective,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,60 @@
-<p>lesson3 works!</p>
+<h3>了解綁定 Binding</h3>
+
+<hr>
+
+<p>在 Angular 模板中，綁定建立了模板創建的 UI 的一部分（DOM 元素、指令或組件）與模型（模板所屬的組件實例）之間的實時連接。此連接可用於將視圖與模型同步，當視圖中發生事件或用戶動作時，或兩者皆有。Angular
+    的變更檢測算法負責保持視圖和模型同步。</p>
+
+<p>綁定的示例包括：</p>
+
+<ul>
+    <li>文本插值 text interpolations</li>
+    <li>屬性綁定 property binding</li>
+    <li>事件綁定 event binding</li>
+    <li>雙向綁定 two-way binding</li>
+</ul>
+
+<p>綁定始終由兩個部分組成：目標（將接收綁定值的對象）和模板表達式（從模型產生值）。</p>
+
+<hr>
+
+<div [innerHtml]="codes[0] | safeHtml"></div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="BINDINGS">
+        <th mat-header-cell *matHeaderCellDef> BINDINGS </th>
+        <td mat-cell *matCellDef="let element"> {{element.BINDINGS}} </td>
+    </ng-container>
+    <ng-container matColumnDef="DETAILS">
+        <th mat-header-cell *matHeaderCellDef> DETAILS</th>
+        <td mat-cell *matCellDef="let element"> {{element.DETAILS}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<br>
+
+<div [innerHtml]="codes[1] | safeHtml"></div>
+
+<div class="d-flex justify-content-center align-content-center">
+    <button mat-mini-fab matTooltip="Primary" color="primary" (click)="dec()">
+        <mat-icon>exposure_neg_1</mat-icon>
+    </button>
+    <span [style.font-size.px]="size">FontSize: {{size}}px</span>
+    <button mat-mini-fab matTooltip="Primary" color="primary" (click)="inc()">
+        <mat-icon>plus_one</mat-icon>
+    </button>
+</div>
+
+<div [innerHtml]="codes[2] | safeHtml"></div>
+
+<div class="alert alert-primary" role="alert">
+    <i class="fa-solid fa-circle-info"></i> 表單中的雙向綁定
+    <div>
+        <p>因為沒有內建的 HTML 元素遵循 x 值和 xChange 事件的模式，所以在表單元素上進行雙向綁定需要使用 NgModel。</p>
+        <p>有關如何在表單中使用雙向綁定的更多資訊，請參閱 
+            <a href="https://angular.io/guide/built-in-directives#ngModel" target="_blank">Angular NgModel</a>。
+        </p>
+    </div>
+</div>

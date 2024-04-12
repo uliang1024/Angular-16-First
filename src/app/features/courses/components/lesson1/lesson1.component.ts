@@ -8,8 +8,7 @@ import { PrismService } from 'src/app/services/prism.service';
   styleUrls: ['./lesson1.component.scss']
 })
 export class Lesson1Component implements OnInit, AfterViewChecked {
-  name = 'Angular';
-
+  
   highlighted = false;
 
   code = `
