@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+}
+
+::ng-deep code {
+    background-color: #b4b0b03d;
+    border-radius: 4px;
+    padding: 4px;
+    font-family: Roboto Mono, monospace;
+    font-size: 1rem;
+    color: #444;
+}
+
+.mdc-data-table__cell {
+    padding: 16px;
+}
+
+td {
+    line-height: 2 !important;
+}

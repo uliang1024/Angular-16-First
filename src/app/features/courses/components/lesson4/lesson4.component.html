@@ -1,0 +1,28 @@
+<h3>了解管道 Pipes</h3>
+<p>使用管道轉換字串、貨幣金額、日期和其他資料以供顯示。</p>
+<hr>
+
+<h4>內建 Pipes</h4>
+<p>Angular 為典型的資料轉換提供了內建管道，包括國際化轉換 (i18n)，它使用區域設定資訊來格式化資料。以下是常用的用於資料格式化的內建管道：</p>
+
+<ng-container *ngIf="dataSource">
+    <mat-list>
+        <ng-container *ngFor="let item of dataSource">
+            <mat-list-item>
+                <code>
+            <a href="{{ item.link }}" target="_blank">{{ item.pipesName }}</a>
+          </code>: {{ item.describe }}
+            </mat-list-item>
+        </ng-container>
+    </mat-list>
+</ng-container>
+
+<div class="alert alert-primary" role="alert">
+    
+    <p><i class="fa-solid fa-circle-info"></i> 有關內建管道的完整列表，請參閱。
+        <a href="https://angular.io/api/common#pipes" target="_blank">管道 API 文件</a>。
+    </p>
+    <p><i class="fa-solid fa-circle-info"></i> 要了解有關使用管道進行國際化 (i18n) 工作的更多信息，請參閱
+        <a href="https://angular.io/guide/i18n-common-format-data-locale" target="_blank">基於區域設定格式化資料</a>。
+    </p>
+</div>

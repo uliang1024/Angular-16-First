@@ -13,12 +13,13 @@ mat-sidenav-container {
         background: #002b5c;
         color: white;
         border-radius: 10px;
-        padding: 16px;
         text-align: center;
 
-        ::ng-deep .mat-drawer-inner-container {
-            height: auto;
+        a {
+            padding-inline: 25px;
+            padding-block: 10px;
         }
+
 
         .avatar {
             margin-top: 16px;
@@ -51,25 +52,25 @@ mat-sidenav-container {
             justify-content: flex-start;
             font-size: 1rem;
             color: white;
+            padding: 0;
 
             mat-icon {
                 margin-right: 8px;
             }
 
-            .mdc-list-item {
-                padding: 0;
-            }
-
             ::ng-deep {
                 .mdc-list-item.mdc-list-item--with-one-line {
-                    height: auto;
+
 
                     .mdc-list-item__content {
                         display: flex;
                         justify-content: flex-start;
 
+
                         .mdc-list-item__primary-text {
                             color: white;
+                            display: flex;
+                            align-items: center;
                         }
                     }
                 }
@@ -80,10 +81,6 @@ mat-sidenav-container {
             background: #002b5c;
             color: white;
             width: 100%;
-
-            mat-expansion-panel-header {
-                padding: 0;
-            }
         }
 
         ::ng-deep {
@@ -91,11 +88,10 @@ mat-sidenav-container {
                 padding: 0;
 
                 .mdc-list-item.mdc-list-item--with-one-line {
-                    height: auto;
-
                     .mdc-list-item__content {
                         display: flex;
                         justify-content: flex-start;
+                        padding-left: 32px;
 
                         .mdc-list-item__primary-text {
                             color: white;
@@ -111,7 +107,7 @@ mat-sidenav-container {
             }
 
             .mat-expansion-indicator {
-                padding-inline: 5px;
+     
 
                 &::after {
                     color: white !important;

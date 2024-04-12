@@ -23,33 +23,33 @@ const ELEMENT_DATA: PeriodicElement[] = [
     hook_method: '<code>ngOnInit()<code/>',
     purpose: `
   初始化指令或顯示組件後，Angular 首先資料綁定屬性並設定指令或組件的輸入屬性。`,
-    timing: `第一次 ngOnChanges() 之後調用一次。即使沒有呼叫 ngOnChanges()（當沒有模板綁定的輸入時就是這種情況），也仍然會呼叫ngOnInit()。`
+    timing: `第一次 <code>ngOnChanges()</code> 之後調用一次。即使沒有呼叫 <code>ngOnChanges()</code>（當沒有模板綁定的輸入時就是這種情況），也仍然會呼叫<code>ngOnInit()</code>。`
   },
   {
     hook_method: '<code>ngDoCheck()<code/>',
     purpose: `
   在 Angular 無法或不會自行檢測到的變化時進行檢測並採取行動。`,
-    timing: `在每次變更偵測運行時立即呼叫 ngOnChanges()，並在第一次執行時立即呼叫 ngOnInit() 後呼叫。`
+    timing: `在每次變更偵測運行時立即呼叫 <code>ngOnChanges()</code>，並在第一次執行時立即呼叫 <code>ngOnInit()</code> 後呼叫。`
   },
   {
     hook_method: '<code>ngAfterContentInit()<code/>',
     purpose: '在 Angular 把外部內容投影到元件的視圖中，或是投影到指令所在的視圖後做出回應。',
-    timing: `在第一次 ngDoCheck() 後呼叫一次。`
+    timing: `在第一次 <code>ngDoCheck()</code> 後呼叫一次。`
   },
   {
     hook_method: '<code>ngAfterContentChecked()<code/>',
     purpose: '在 Angular 檢查投影到指令或元件中的內容後做出回應。',
-    timing: `在 ngAfterContentInit() 之後和每次 ngDoCheck() 之後呼叫。`
+    timing: `在 <code>ngAfterContentInit()</code> 之後和每次 <code>ngDoCheck()</code> 之後呼叫。`
   },
   {
     hook_method: '<code>ngAfterViewInit()<code/>',
     purpose: '在 Angular 初始化元件的視圖和子視圖，或包含指令的視圖後做出回應。',
-    timing: `在第一次 ngAfterContentChecked() 後呼叫一次。`
+    timing: `在第一次 <code>ngAfterContentChecked()</code> 後呼叫一次。`
   },
   {
     hook_method: '<code>ngAfterViewChecked()<code/>',
     purpose: '在 Angular 檢查元件的視圖和子視圖，或包含指令的視圖後做出回應。',
-    timing: `在 ngAfterViewInit() 之後和每次 ngAfterContentChecked() 後呼叫。`
+    timing: `在 <code>ngAfterViewInit()</code> 之後和每次 <code>ngAfterContentChecked()</code> 後呼叫。`
   },
   {
     hook_method: '<code>ngOnDestroy()<code/>',
